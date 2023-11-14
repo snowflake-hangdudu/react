@@ -4,6 +4,7 @@ export default defineAppConfig({
     "pages/test1/index",
     "pages/test2/index",
     "pages/test3/index",
+    "pages/form/index",
   ],
   window: {
     backgroundTextStyle: "light",

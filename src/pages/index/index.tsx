@@ -14,11 +14,18 @@ export default function Index() {
     });
   };
 
+  const goForm = () => {
+    Taro.navigateTo({
+      url: "/pages/form/index", // 目标页面的路径
+    });
+  };
+
   return (
     <View className="index">
       <Text>Hello world!</Text>
       <Text>Hello world!</Text>
       <Button onClick={handleButtonClick}>点我去别的页面</Button>
+      <Button onClick={goForm}>点我去表单页</Button>
     </View>
   );
 }

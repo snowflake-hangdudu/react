@@ -50,7 +50,7 @@
     "@tarojs/react": "3.6.19",
     "@tarojs/runtime": "3.6.19",
     "@tarojs/shared": "3.6.19",
-    "@tarojs/taro": "3.6.19",
+    "@tarojs/taro": "^3.6.19",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
