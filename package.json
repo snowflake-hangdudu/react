@@ -1,8 +1,8 @@
 {
-  "name": "myApp",
+  "name": "myapp",
   "version": "1.0.0",
   "private": true,
-  "description": "myApp",
+  "description": "myapp",
   "templateInfo": {
     "name": "default",
     "typescript": true,
@@ -64,7 +64,7 @@
     "@types/jest": "^29.3.1",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.0",
-    "@types/sass": "^1.45.0",
+    "@types/sass": "^1.43.1",
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
