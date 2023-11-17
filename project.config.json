@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "myApp",
   "description": "myApp",
-  "appid": "touristappid",
+  "appid": "wx6dcc91580d35b8e7",
   "setting": {
     "urlCheck": true,
     "es6": false,
