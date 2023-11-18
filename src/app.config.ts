@@ -6,6 +6,7 @@ export default defineAppConfig({
     "pages/test3/index",
     "pages/test4/index",
     "pages/form/index",
+    "pages/page1/index",
   ],
   permission: {
     "scope.userLocation": {

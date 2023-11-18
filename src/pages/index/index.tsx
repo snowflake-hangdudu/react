@@ -1,31 +1,31 @@
 import { View, Text, Button } from "@tarojs/components";
-import { useLoad } from "@tarojs/taro";
-import Taro from "@tarojs/taro";
+import Taro, { getCurrentInstance } from "@tarojs/taro";
 import "./index.scss";
+import React, { Component } from "react";
 
-export default function Index() {
-  useLoad(() => {
-    console.log("Page loaded.");
-  });
+class Index extends Component {
+  params = getCurrentInstance();
+  componentDidMount() {
+    console.log("componentDidMount");
+    console.log(location.href, "我是location");
+    console.log(this.params.router?.params, "我是params");
+  }
 
-  const handleButtonClick = () => {
-    Taro.switchTab({
-      url: "/pages/test1/index", // 目标页面的路径
-    });
-  };
-
-  const goForm = () => {
+  // 跳转到目的页面，打开新页面
+  goNewPage(id: number) {
+    console.log(id);
     Taro.navigateTo({
-      url: "/pages/form/index", // 目标页面的路径
+      url: `/pages/page1/index?id=${id}`,
     });
-  };
+  }
 
-  return (
-    <View className="index">
-      <Text>Hello world!</Text>
-      <Text>Hello world!</Text>
-      <Button onClick={handleButtonClick}>点我去别的页面</Button>
-      <Button onClick={goForm}>点我去表单页</Button>
-    </View>
-  );
+  render() {
+    return (
+      <View>
+        <Button onClick={() => this.goNewPage(2)}>跳转到新页面</Button>
+      </View>
+    );
+  }
 }
+
+export default Index;
