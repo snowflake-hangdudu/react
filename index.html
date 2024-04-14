@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: rgb(48, 149, 243);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      //给元素添加unique key属性，可以保证每次渲染时，元素的key值都不同，从而保证渲染的正确性
+      const name = "hangdudu";
+      const age = 25;
+      //模拟数据
+      const data = ["React", "Vue", "Angular"];
+      //渲染React组件
+      const element = (
+        <div key={name}>
+          <h1>前端框架</h1>
+          <ul>
+            {data.map((item, index) => (
+              <li key={index} className="red">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+
+      ReactDOM.render([element], document.getElementById("root"));
+    </script>
+  </body>
+</html>
