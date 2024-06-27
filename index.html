@@ -16,26 +16,40 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-      //给元素添加unique key属性，可以保证每次渲染时，元素的key值都不同，从而保证渲染的正确性
-      const name = "hangdudu";
-      const age = 25;
-      //模拟数据
-      const data = ["React", "Vue", "Angular"];
-      //渲染React组件
-      const element = (
-        <div key={name}>
-          <h1>前端框架</h1>
-          <ul>
-            {data.map((item, index) => (
-              <li key={index} className="red">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      );
+      class Person extends React.Component {
+        /* 
+       使用createRef
+       */
+        myRef = React.createRef();
+        state = { isHot: true };
 
-      ReactDOM.render([element], document.getElementById("root"));
+        login = () => {};
+
+        render() {
+          return (
+            <div className="container">
+              <input type="text" ref={this.myRef} placeholder="用户名" />
+              <input type="text" ref={this.myRef} placeholder="密码" />
+
+              <button className="red" onClick={this.login}>
+                提交
+              </button>
+            </div>
+          );
+        }
+      }
+      let hangdudu = {
+        name: "hangdudu",
+        age: 22,
+        gender: "man",
+      };
+
+      ReactDOM.render(
+        //标签属性，可以使用...props
+
+        <Person />,
+        document.getElementById("root")
+      );
     </script>
   </body>
 </html>
